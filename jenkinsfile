@@ -7,6 +7,7 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/aldiprtmb/simple-apps.git'
             }
         }
+
         
         stage('Build') {
             steps {
@@ -19,7 +20,6 @@ pipeline {
         stage('Testing') {
             steps {
                 sh'''
-                cd app
                 npm test
                 npm run test:coverage
                 '''

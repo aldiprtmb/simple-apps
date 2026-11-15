@@ -1,0 +1,11 @@
+services:
+  simple-apps:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nodejs-app-pakai-compose
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    restart: always

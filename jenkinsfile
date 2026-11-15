@@ -1,10 +1,10 @@
 pipeline {
-    agent { label 'devops1-nama' }
+    agent { label 'ubuntu01-aldi' }
 
     stages {
         stage('Pull SCM') {
             steps {
-                git branch: 'main', url: 'https://github.com/username/simple-apps.git'
+                git branch: 'main', url: 'https://github.com/aldiprtmb/simple-apps.git'
             }
         }
         

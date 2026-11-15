@@ -50,5 +50,13 @@ pipeline {
                  sh 'docker compose push' 
             }
         }
+
+        stage('Selesai Bos!!!') {
+            steps {
+                sh '''
+                    echo "[$(date '+%Y-%m-%d %H:%M:%S %z')] BUILD SUCCESS | Job: $JOB_NAME | Build: #$BUILD_NUMBER | selesai bos" >> buildjenkins.log
+                '''
+            }
+        }
     }
 }

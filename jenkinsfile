@@ -29,6 +29,8 @@ pipeline {
             steps {
                 sh'''
                 sonar-scanner \
+                    -Dsonar.scanner.socketTimeout=300 \
+                    -Dsonar.scanner.responseTimeout=300
                     -Dsonar.projectKey=simple-apps \
                     -Dsonar.sources=. \
                     -Dsonar.host.url=http://172.23.1.141:9000 \
